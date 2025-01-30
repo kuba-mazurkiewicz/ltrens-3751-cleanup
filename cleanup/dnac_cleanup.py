@@ -22,7 +22,7 @@ def authenticate(url, username, password):
         click.echo(f"Authentication failed: {e}")
         return None
 
-def cleanup_pools(token, url, dryrun=False):
+def cleanup_pools(token, url, dryrun=True):
     """Cleanup IP pools in Lab 1."""
     if dryrun:
         headers = {"x-auth-token": token, 'content-type': 'application/json'}
